@@ -22,6 +22,16 @@ class HomePage extends StatelessWidget {
                   child: WebAppBar(),
                 ),
           drawer: constraints.maxWidth < mobileBreakpoint ? const Drawer() : null,
+          body: Align(
+            alignment: Alignment.topCenter,
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 1400),
+              child: Container(
+                height: 1000,
+                color: Colors.red,
+              ),
+            ),
+          ),
         );
       },
     );
